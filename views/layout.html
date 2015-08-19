@@ -9,10 +9,11 @@
     <title>Trip Planner</title>
 
     <!-- Bootstrap core CSS -->
-
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="/stylesheets/trip-planner.css" rel="stylesheet">
-        <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
   </head>
 
@@ -21,18 +22,18 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/">Trip Planner</a>
+          <a class="navbar-brand" href="/"><b class="glyphicon glyphicon-globe"></b>&nbspTrip Planner</a><a class="navbar-brand" href="/contact">Contact</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/">Places</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
     </nav>
-    
+
     {% block body %}{% endblock %}
 
     <div class="container">

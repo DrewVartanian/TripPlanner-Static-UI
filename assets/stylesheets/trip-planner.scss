@@ -1,3 +1,63 @@
-p {
-	text-align: center;
+$jumbotron-padding: 30px;
+$select-width: 270px;
+$selector-right-position: 15px;
+
+.navbar {
+  .container {
+    margin: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+}
+
+.navbar-brand {
+  line-height: 25px;
+}
+
+.navbar-right {
+  margin-right: 0;
+  width: (($selector-right-position+$jumbotron-padding)*2)+$select-width+30;
+
+  li {
+    width: 100%;
+    text-align: center;
+
+    a {
+      padding: 0;
+      padding-top: 19px;
+    }
+  }
+}
+
+body {
+  margin-top: 50px;
+}
+
+#map-canvas {
+  position: absolute;
+  height: 100vw;
+  width: 100vw;
+  z-index:-100;
+}
+
+#selector {
+  padding-top: 25px;
+  position: absolute;
+  right: $selector-right-position;
+  width: auto;
+  z-index: 100;
+
+  label,
+  select {
+    display: block;
+  }
+
+  select {
+    width: $select-width;
+  }
+
+  .jumbotron {
+    padding: $jumbotron-padding;
+    padding-bottom: 40px;
+  }
 }

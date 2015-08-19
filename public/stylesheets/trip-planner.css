@@ -1,2 +1,41 @@
-p {
-  text-align: center; }
+.navbar .container {
+  margin: 0;
+  padding-right: 0;
+  width: 100%; }
+
+.navbar-brand {
+  line-height: 25px; }
+
+.navbar-right {
+  margin-right: 0;
+  width: 390px; }
+  .navbar-right li {
+    width: 100%;
+    text-align: center; }
+    .navbar-right li a {
+      padding: 0;
+      padding-top: 19px; }
+
+body {
+  margin-top: 50px; }
+
+#map-canvas {
+  position: absolute;
+  height: 100vw;
+  width: 100vw;
+  z-index: -100; }
+
+#selector {
+  padding-top: 25px;
+  position: absolute;
+  right: 15px;
+  width: auto;
+  z-index: 100; }
+  #selector label,
+  #selector select {
+    display: block; }
+  #selector select {
+    width: 270px; }
+  #selector .jumbotron {
+    padding: 30px;
+    padding-bottom: 40px; }

@@ -2,32 +2,62 @@
 
 {% block body %}
 
-<p>Hello World</p>
-<form>
-  <label>Hotels
+
+<div id="map-canvas"></div>
+
+<div class="container" id="selector">
+<div class="jumbotron">
+  <form>
+    <label>Hotels</label>
     <select>
       {% for hotel in all_hotels %}
         <option> {{hotel.name}} </option>
       {% endfor %}
     </select>
-  </label>
-
-  <label>Restaurants
+    </br>
+    <label>Restaurants</label>
     <select>
       {% for restaurant in all_restaurants %}
         <option> {{restaurant.name}} </option>
       {% endfor %}
     </select>
-  </label>
-
-  <label>Activities
+    </br>
+    <label>Activities</label>
     <select>
       {% for activity in all_activities %}
         <option> {{activity.name}} </option>
       {% endfor %}
     </select>
-  </label>
-</form>
+  </form>
+</div>
+</div>d
+<script>
+  function initialize_gmaps() {
+      // initialize new google maps LatLng object
+      var myLatlng = new google.maps.LatLng(40.705189,-74.009209);
+      // set the map options hash
+      var mapOptions = {
+          center: myLatlng,
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      // get the maps div's HTML obj
+      var map_canvas_obj = document.getElementById("map-canvas");
+      // initialize a new Google Map with the options
+      var map = new google.maps.Map(map_canvas_obj, mapOptions);
+      // Add the marker to the map
+      var marker = new google.maps.Marker({
+          position: myLatlng,
+          title:"Hello World!"
+      });
+      // Add the marker to the map by calling setMap()
+      marker.setMap(map);
+  }
 
+  $(document).ready(function() {
+      initialize_gmaps();
+  });
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-cuG7raWI7wQlRcyIElTiNCkSbCs65_g&sensor=true"></script>
 
 {% endblock  %}
